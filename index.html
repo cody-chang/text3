@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="device-width, initial-scale=1, maximum-scale=1"/>
+<title>自我介紹</title>
+<script type="text/javascript">
+function toggleMenu(number){
+	var menu=document.getElementById("menu-"+number);
+	menu.classList.toggle("hide");
+};
+function over(element){
+	element.style.color="red";
+};
+function out(element){
+	element.style.color="black";
+};
+/*
+function init(){
+	var sp=document.getElementById("sp");
+	var handler=function(){
+		sp.style.color="red";
+	};
+	sp.addEventListener("mouseover",handler);
+}
+*/
+</script>
+<style type="text/css">
+.title{ /*標題*/
+	background-color:#003344;color:white;font-size:25px;
+	text-align:center;padding:10px
+}
+.content{
+	margin-left:auto;margin-right:auto;
+}
+body{ /*內文*/
+	font-size:16px;font-family:"微軟正黑體"
+}
+h3{ /*次標題*/
+	font-size:20px;text-decoration:underline;
+}
+img{
+	width:33%;
+	max-width:300px;
+	height:auto;
+}
+
+.hide{
+	display:none;
+	color:blue;
+}
+#btn{
+	border:1px solid #888888;
+	bachground-color:#ffffff;padding:5px
+}
+#btn:hover{
+	background-color:#888888;
+}
+input:focus{
+	border:5px solid #ff0000;
+}
+table{ 
+	width:400px;
+	border-collapse:collapse;
+}
+td{
+	border-bottom:1px solid #888888;padding:10px;
+}
+tr:nth-child(1){
+	background-color:#7788aa;color:white
+}
+tr:nth-child(even){
+	background-color:#e8e8e8;
+}
+main{
+	display:flex;flex-wrap:wrap;
+	border-top:2px solid #888888;
+}
+main>.work{
+	flex:auto;
+	background-color:#ccccff;
+	font-size:18px;
+	text-align=center;
+}
+main>.user{
+	flex:none;
+	width:33%;
+	max-width:300px;
+	background-color:#ccffcc;
+	font-weight:bold;
+}
+.h1{
+	font-size:20px;font-weight:bold;
+}
+nav{
+	display:flex;flex-wrap:wrap;
+	text-align:center;
+	font-size:22px;font-weight:bold;
+}
+nav>.pic{
+	flex:none;
+	width:33%;
+	max-width:300px;
+	background-color:#ffcccc;
+}
+nav>.menu{
+	flex:auto;
+	background-color:#ccccff;
+}
+nav>.user{
+	flex:none;
+	width:33%;
+	max-width:300px;
+	background-color:#ccffcc;
+}
+@media screen and (max-width:600px){
+	.content{width:100%;}
+}
+</style>
+<body onload="init();">
+	<div class="title">自我介紹</div>
+	<div class="content">	
+		<nav>
+			<div class="pic">我的照片</div>
+			<div class="menu">我的工作經驗</div>
+			<div class="user">我的擅長工具</div>
+		</nav>
+		<main>
+			<img src="head1.JPG" />
+			<div class="work">
+				<span class="h1">欣興電子:</span>
+				<br>1.新機release
+				<br>2.優化機台參數，AOI實驗測試&異常處理
+				<br>3.整理實驗數據，彙整報告
+				<br>4.與廠商討論可優化設備的可能，並評估價格合理性
+				<br>5.主管交辦事項
+				<br><span class="h1">智泰科技:</span>
+				<br>1.光學架構需求評估(拍攝樣品取像)
+				<br>2.選擇合適(線/面)工業相機&鏡頭&光源
+				<br>3.使用影像檢測軟體檢出客戶需求之瑕疵
+				<br>4.跨部門合作客製AOI設備
+				<br>5.主管交辦事項
+			</div>
+			<div class="user">
+				<span>辦公室應用類：</span>
+				<br>Excel、Word、PowerPoint
+				<br>前端程式應用:
+				<br>HTML、CSS、JavaScript
+				<br>後端程式應用: 
+				<br>Python、MySQL
+			</div>
+		</main>
+	</div>
+	<h3 onclick="toggleMenu(1);" onmouseover="over(this);" onmouseout="out(this);">我的興趣</h3>
+	<ul id="menu-1" class="hide">
+		<li>健身</li>
+		<li>彈吉他</li>
+		<li>投資理財</li>
+	</ul>
+	<h3 onclick="toggleMenu(2);" onmouseover="over(this);" onmouseout="out(this);">在學經歷</h3>
+	<ul id="menu-2" class="hide">
+		<li>市立華江高中/日間部</li>
+		<li>國立台東大學/物理系</li>
+		<li>國立中正大學/物研所</li>
+	</ul>
+	<h3 onclick="toggleMenu(3);" onmouseover="over(this);" onmouseout="out(this);">我的最愛連結</h3>
+	<ul id="menu-3" class="hide">
+		<li><a href="https://www.google.com/?hl=zh-TW">Google連結</a></li>
+		<li><a href="https://www.ptt.cc/bbs/movie/index.html">PTT電影版</a></li>
+	</ul>
+	<h3>和我連絡</h3>
+	<div class="content">
+		填寫訊息 <input type="text" /> <button id="btn">送出</button>
+	</div>
+	<h3>我熱愛的球隊</h3>
+	<div class "content">
+		<table>
+			<tr>
+				<td>Name</td>
+				<td>Win</td>
+				<td>Loss</td>
+			</tr>
+			<tr>
+				<td>New York Yankees</td>
+				<td>10</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td>Boston Red Sox</td>
+				<td>9</td>
+				<td>9</td>
+			</tr>
+			<tr>
+				<td>Toronto Blue Jays</td>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+		</table>
+	</div>
+	<h3>實作影片</h3>
+		<video  id="video" src="movie.mp4" controls></video>
+</body>
+</head>
+</html>
