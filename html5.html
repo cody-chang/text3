@@ -1,0 +1,22 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Event object事件處理</title>
+<script type="text/javascript">
+function init(){
+	var btn=document.getElementById("btn");
+	var handler=function(e){    //取得使用者滑鼠位置Code
+		alert(e.clientX+","+e.clientY);
+	};
+	btn.addEventListener("click",handler);
+	document.addEventListener("keydown",function(e){ //取得使用者鍵盤的Code
+		alert(e.keyCode);
+	});
+}
+</script>
+</head>
+<body onload="init();">
+	<button id="btn">Click</button>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="device-width, initial-scale=1, maximum-scale=1"/>
+<title>自我介紹</title>
+<style type="text/css">
+body{
+	font-size:16px;font-family:"微軟正黑體"
+}
+h3{
+	font-size:24px;text-decoration:underline;
+}
+div.content{
+	width:1000px;padding:10px;
+}
+#btn{
+	border:1px solid #888888;
+	bachground-color:#ffffff;padding:5px
+}
+#btn:hover{
+	background-color:#888888;
+}
+input:focus{
+	border:5px solid #ff0000;
+}
+.favorite a{
+	color:blue
+}
+table{
+	width:400px;
+	border-collapse:collapse;
+}
+td{
+	border-bottom:1px solid #888888;padding:10px;
+}
+tr:nth-child(1){
+	background-color:#7788aa;color:white
+}
+tr:nth-child(even){
+	background-color:#e8e8e8;
+}
+nav{
+	display:flex;
+}
+nav>.logo{
+	flex:none;
+	width:100px;
+	background-color:#ffcccc;
+}
+nav>.menu{
+	flex:auto;
+	background-color:#ccccff;
+}
+nav>.user{
+	flex:none;
+	width:100px;
+	background-color:#ccffcc;
+}
+main{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background-color:#cccccc;
+	/* align-items:flex-start */
+}
+main>.content{
+	flex:none;
+	width:300px;margin:10px;
+	background-color:#ffcccc;
+}
+@media screen and (max-width:600px){
+	.content{width:100%;}
+}
+</style>
+<body>
+	<h2>自我介紹</h2>
+		<div class="content">
+			大家好，我是阿程
+		</div>
+	<h3>我的興趣</h3>
+	<ul class="content">
+		<li>健身</li>
+		<li>彈吉他</li>
+		<li>投資</li>
+	</ul>
+	<h3>在學經歷</h3>
+	<ul class="content">
+		<li>華江高中</li>
+		<li>台東大學</li>
+		<li>中正大學</li>
+	</ul>
+	<h3>我的最愛連結</h3>
+	<ul class="favorite">
+		<li><a href="https://www.google.com/?hl=zh-TW">Google連結</a></li>
+		<li><a href="https://www.ptt.cc/bbs/movie/index.html">PTT電影版</a></li>
+	</ul>
+	<h3>和我連絡</h3>
+	<div class="content">
+		填寫訊息 <input type="text" /> <button id="btn">送出</button>
+	</div>
+	<h3>我熱愛的球隊</h3>
+	<div class "content">
+		<table>
+			<tr>
+				<td>Name</td>
+				<td>Win</td>
+				<td>Loss</td>
+			</tr>
+			<tr>
+				<td>New York Yankees</td>
+				<td>10</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td>Boston Red Sox</td>
+				<td>9</td>
+				<td>9</td>
+			</tr>
+			<tr>
+				<td>Toronto Blue Jays</td>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+		</table>
+	</div>
+	<nav>
+		<div class="logo">Logo</div>
+		<div class="menu">Menu</div>
+		<div class="user">User</div>
+	</nav>
+	<main>
+		<div class="content">New1</div>
+		<div class="content">New2</div>
+		<div class="content">New3</div>
+	</main>
+</body>
+</head>
+</html>
